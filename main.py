@@ -59,7 +59,7 @@ def room_gen():
         add_conn(rooms_temp, False)
 
 
-def containers_gen():
+def containers_config():
     while True:
         for key in rooms.keys():
             print("ID of room: ", key, "Name of room: '", rooms[key]["name"], "' Contains of the room: ",
@@ -76,16 +76,9 @@ def containers_gen():
             print("\nPlease enter only id number example '1', without apostrophe, check if number is correct ID number\n\n" )
 
 def main():
-    rooms = {
-        1: {"name": "", "Contains": [], "Connects": []}
-    }
-    name = input()
-
-    rooms[2] = {"name": name, "Contains": [1], "Connects": [3]}
-
-    print(rooms.keys())
+    # room_gen()
+    containers_config()
 
 
 if __name__ == '__main__':
-    # room_gen()
-    containers_gen()
+    main()
