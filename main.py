@@ -2,7 +2,7 @@ import RoomClass as R
 
 rooms = {1: {'name': 'Startowa_Lokacja', 'Contains': [1, 2], 'Connects': [2]}
          }
-
+containers = {}
 
 def room_gen():
     id_connect_list = []
@@ -65,15 +65,17 @@ def containers_config():
             print("ID of room: ", key, "Name of room: '", rooms[key]["name"], "' Contains of the room: ",
                   rooms[key]["Contains"],
                   " Connections to/from of the room: ", rooms[key]["Connects"])
-        print(f"Please provide room id that you want want to config, if you don't want to config any containers please enter 0:  ")
+        print(f"Please provide room id that you want want to config, if you don't want to config any containers "
+              f"please enter 0:  ")
         room_id = input()
         # room_id = int(room_id)
         if room_id.isdecimal() and int(room_id) in rooms.keys() and int(room_id) != 0:
-            print("s")
+            print("Everything went fine!")
         elif room_id.isdecimal() and int(room_id) == 0:
             break
         else:
-            print("\nPlease enter only id number example '1', without apostrophe, check if number is correct ID number\n\n" )
+            print("\nPlease enter only id number example '1', without apostrophe, check if number is correct ID "
+                  "number\n\n" )
 
 def main():
     # room_gen()
